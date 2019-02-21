@@ -1,0 +1,24 @@
+<div id = "main">
+  <h1>Anonymous Notes</h1>
+  <div id = "noteform">
+    <form (submit) = "createNote()" #noteData = "ngForm">
+      <span *ngIf = "error" style = "color:rgb(177, 61, 61);">{{data.note}}</span>
+      <span *ngIf = "note.invalid && (note.dirty || note.touched)" >
+        <span class = "error" *ngIf = "note.errors.minlength">Note must be at least 3 characters long</span>
+      </span><br/>
+
+      <input type = "text" name = "note" [(ngModel)] = "newNote.note" #note = "ngModel"
+        ngModel required minlength = "3" size = "60" placeholder = "Add a note..."/>
+  
+      <input type = "submit" value = "Add Note" 
+      class = "btn btn-success" [disabled] = "noteData.form.invalid"/>
+    </form>
+  </div>
+
+  <div id = "allnotes">
+    <div class = "singlenote" *ngFor = "let note of notes?.reverse()">
+      <h6>Posted on: {{note.createdAt | date: "medium"}}</h6><br/><br/>
+      <p>{{note.note}}</p>
+    </div>
+  </div>
+</div>

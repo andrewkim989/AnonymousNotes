@@ -1,0 +1,45 @@
+#main {
+    margin: auto;
+    background-color: lightgrey;
+    padding-bottom: 30px;
+}
+h1 {
+    text-align: center;
+    padding: 10px;
+}
+#noteform {
+    margin: 10px auto;
+    padding: 20px;
+    background-color: white;
+    width: 650px;
+}
+.error {
+    color: rgb(177, 61, 61);
+}
+input {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+input[type = "submit"] {
+    margin-left: 15px;
+}
+#noteform span {
+    margin-left: 5px;
+}
+#allnotes {
+    margin: auto;
+    width: 800px;
+    margin-top: 20px;
+    background-color: rgb(165, 165, 165);
+    padding: 20px;
+    overflow: auto;
+    max-height: 500px;
+}
+.singlenote {
+    background-color: lightblue;
+    padding: 10px;
+    margin: 10px;
+}
+.singlenote h6 {
+    float: right;
+}
